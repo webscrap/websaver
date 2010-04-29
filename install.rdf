@@ -2,7 +2,19 @@
 <RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
          xmlns:NC="http://home.netscape.com/NC-rdf#"
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <RDF:Description RDF:about="rdf:#$o6eAq"
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="websaver2@xiaoranzzz.myplace"
+                   em:name="Web Saver 2"
+                   em:version="1.0"
+                   em:creator="xiaoranzzz@myplace.hell"
+                   em:description="Capture and manage urls,images,notes..."
+                   em:homepageURL="http://xiaoranzzz.blogspot.com"
+                   em:iconURL="chrome://websaver2/skin/websaver232.png"
+                   em:optionsURL="chrome://websaver2/content/options.xul">
+    <em:targetApplication RDF:resource="rdf:#$34jVz"/>
+    <em:file RDF:resource="urn:mozilla:extension:file:websaver2"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$34jVz"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="1.0"
                    em:maxVersion="3.*" />
@@ -10,16 +22,4 @@
                    em:package="content/"
                    em:skin="skin/classic/"
                    em:locale="locale/en-US/" />
-  <RDF:Description RDF:about="urn:mozilla:install-manifest"
-                   em:id="websaver2@xiaoranzzz.myplace"
-                   em:name="Web Saver 2"
-                   em:version="0.6"
-                   em:creator="xiaoranzzz@myplace.hell"
-                   em:description="Capture and manage urls,images,notes..."
-                   em:homepageURL="http://xiaoranzzz.blogspot.com"
-                   em:iconURL="chrome://websaver2/skin/websaver232.png"
-                   em:optionsURL="chrome://websaver2/content/options.xul">
-    <em:targetApplication RDF:resource="rdf:#$o6eAq"/>
-    <em:file RDF:resource="urn:mozilla:extension:file:websaver2"/>
-  </RDF:Description>
 </RDF:RDF>
