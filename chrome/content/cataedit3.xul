@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://websaver2/skin/options.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://websaver2/locale/websaver2.dtd">
+
+<dialog
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="websaver2CatalogEditor"
+        minwidth="600"
+        title="&websaver2.cataedit.title;"
+        buttons="accept, cancel"
+        flex="1"
+        minheight="400"
+        onload="return onLoad();"
+        ondialogaccept="return onDialogAccept();"
+        ondialogcancel="return onDialogCancel();">
+        <script src="chrome://websaver2/content/shared.js" />
+        <script src="chrome://websaver2/content/catalogHandler.js" />
+        <script src="chrome://websaver2/content/cataedit3.js" />
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="websaver2.locale" src="chrome://websaver2/locale/websaver2.properties"/>
+    </stringbundleset>
+    <vbox flex="1">
+        <groupbox flex="0" orient="vertical">
+        <hbox flex="1" hidden="true">
+            <label width="80" value="File:"/>
+            <textbox disabled="true" flex="1" value="" id="catalogStorage"/>
+            <button disabled="true" label="Select" id="selectDirectory" oncommand="return selectStorage();"/>
+        </hbox>
+        <hbox flex="1">
+            <label width="80" value="Label:"/>
+            <textbox oninput="return labelChange();" flex="1" value="" id="catalogLabel"/>
+        </hbox>
+        <hbox flex="1">
+            <label width="80" value="Directory:"/>
+            <textbox flex="1" value="" id="catalogDirectory"/>
+            <button label="Select" id="selectDirectory" oncommand="return selectDirectory();"/>
+        </hbox>
+        <hbox flex="1">
+        <label value="rDirectory:" width="80"/>
+        <label value="" id="catalogRDirectory" flex="1"/>
+        </hbox>
+        </groupbox>
+        <vbox flex="1">
+        <hbox>
+            <menulist label="" id="menuList" flex="1"/>
+            <button label="Add Catalog" oncommand="return addCatalog();"/>
+            <button label="Add Topic" oncommand="return addTopic();"/>
+            <button label="Delete"
+                id="Delete"
+                oncommand="return deleteItem();"/>
+            <button label="Edit"
+                id="Edit"
+                oncommand="return editItem();"/>
+        </hbox>
+        <hbox flex="1">
+            <listbox onfocus="return onFocus(1);" rows="8" width="120" id="catalogList" flex="1"/>
+            <listbox onfocus="return onFocus(2);" rows="8" id="topicList" flex="4"/>
+        </hbox>
+         <hbox>
+            <label style='color:blue;' id="selectedLabel" value=""  flex="1"/>
+	    <button flex="0" label="Add to Favourite" oncommand="addFavourite();"/>
+        </hbox>
+        </vbox>    
+    </vbox>
+</dialog>

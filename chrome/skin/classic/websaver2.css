@@ -1,0 +1,7 @@
+#siif_toolbarbutton {
+  list-style-image: url("chrome://websaver2/skin/websaver224.png");
+}
+
+toolbar[iconsize="small"] #siif_toolbarbutton {
+  list-style-image: url("chrome://websaver2/skin/websaver216.png");
+}

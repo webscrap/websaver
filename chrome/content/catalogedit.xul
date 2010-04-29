@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://websaver2/skin/options.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://websaver2/locale/websaver2.dtd">
+
+<dialog
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="websaver2CatalogEditor"
+        minwidth="500"
+        flex="1"
+        title="Catalog Editor"
+        buttons="accept, cancel"
+        onload="return onLoad();"
+        ondialogaccept="return onDialogAccept();"
+        ondialogcancel="return onDialogCancel();">
+        <script src="chrome://websaver2/content/shared.js" />
+        <script src="chrome://websaver2/content/catalogedit.js" />
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="websaver2.locale" src="chrome://websaver2/locale/websaver2.properties"/>
+    </stringbundleset>
+    <vbox>
+        <groupbox flex="1" orient="vertical">
+        <caption label="Information"/>
+        <hbox flex="1">
+            <label width="80" value="Label:"/>
+            <textbox flex="1" value="" id="catalogLabel"/>
+        </hbox>
+        <hbox flex="1">
+            <label width="80" value="File:"/>
+            <textbox flex="1" value="" id="catalogDirectory"/>
+            <button label="Select" id="selectDirectory" oncommand="return selectDirectory();"/>
+        </hbox>
+        </groupbox>
+    </vbox>
+</dialog>

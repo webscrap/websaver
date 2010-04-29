@@ -1,0 +1,231 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+CEmbedItem	managestore.js	/^var CEmbedItem; \/\/= createItemTemplate("embed");$/;"	v
+CImageItem	managestore.js	/^var CImageItem; \/\/= createItemTemplate("image");$/;"	v
+CLabelItem	managestore.js	/^var CLabelItem; \/\/= createItemTemplate("label");$/;"	v
+CatalogHandler.cataClick	catalogHandler.js	/^this.cataClick=function(hd) {$/;"	m
+CatalogHandler.getCatalog	catalogHandler.js	/^this.getCatalog = function() {$/;"	m
+CatalogHandler.getCatalogIndex	catalogHandler.js	/^this.getCatalogIndex = function() {$/;"	m
+CatalogHandler.getCatalogPath	catalogHandler.js	/^this.getCatalogPath = function() {$/;"	m
+CatalogHandler.getTopic	catalogHandler.js	/^this.getTopic = function(cat) {$/;"	m
+CatalogHandler.getTopicIndex	catalogHandler.js	/^this.getTopicIndex = function() {$/;"	m
+CatalogHandler.init	catalogHandler.js	/^this.init = function() {$/;"	m
+CatalogHandler.popCatalog	catalogHandler.js	/^this.popCatalog = function() {this.level.pop();};$/;"	m
+CatalogHandler.pushCatalog	catalogHandler.js	/^this.pushCatalog = function(idx) {this.level.push(idx);};$/;"	m
+CatalogHandler.refresh	catalogHandler.js	/^this.refresh = function() {$/;"	m
+CatalogHandler.setCatalogList	catalogHandler.js	/^this.setCatalogList = function(cata) {$/;"	m
+CatalogHandler.setTopicList	catalogHandler.js	/^this.setTopicList = function(cata) {$/;"	m
+WS_DB_DumpCatalog	database.js	/^function WS_DB_DumpCatalog(root,pre) {$/;"	f
+WS_DB_DumpRoot	database.js	/^function WS_DB_DumpRoot(root) {$/;"	f
+WS_DB_DumpTopic	database.js	/^function WS_DB_DumpTopic(root,pre) {$/;"	f
+WebSaverGlobalInit	global.js	/^function WebSaverGlobalInit() {$/;"	f
+WebSaverGlobalSave	global.js	/^function WebSaverGlobalSave() {$/;"	f
+addCatalog	cataedit3.js	/^function addCatalog() {$/;"	f
+addCatalog	database.js	/^        },$/;"	f
+addFavourite	cataedit3.js	/^function addFavourite() {$/;"	f
+addFavourite	seltopic.js	/^function addFavourite() {$/;"	f
+addRemovedItem	managestore.js	/^function addRemovedItem(idx) {$/;"	f
+addTopic	cataedit3.js	/^function addTopic() {$/;"	f
+addTopic	database.js	/^        this.addTopic = function(topic) {$/;"	f
+arrayMoveTop	seltopic.js	/^function arrayMoveTop(arr,idx) {$/;"	f
+button_left_click	flatview.js	/^function button_left_click() {$/;"	f
+button_right_click	flatview.js	/^function button_right_click() {$/;"	f
+cachekey	database.js	/^        var cachekey = Components.classes['@mozilla.org\/supports-string;1'].createInstance(Components.interfaces.nsISupportsString);$/;"	v
+catalog	cataedit3.js	/^var catalog;$/;"	v
+catalog	catalogedit.js	/^var catalog;$/;"	v
+catalog	database.js	/^        var catalog = root;$/;"	v
+catalog	seltopic.js	/^var catalog;$/;"	v
+cdate	database.js	/^        var cdate = Date();$/;"	v
+checkSize	managestore.js	/^function checkSize(image) {$/;"	f
+checkfilter	database.js	/^        var checkfilter=false;$/;"	v
+clickItem	managestore.js	/^function clickItem(event,idx,url) {$/;"	f
+clickOn	managestore.js	/^function clickOn(event,idx) {$/;"	f
+columSize	flatview.js	/^var columSize=2;$/;"	v
+count	database.js	/^        var count;$/;"	v
+createColum	flatview.js	/^function createColum() {$/;"	f
+createElementBox	flatview.js	/^function createElementBox(idx) {$/;"	f
+createItem	managestore.js	/^function createItem(i,item) {$/;"	f
+createItemTemplate	managestore.js	/^function createItemTemplate(type) {$/;"	f
+curIndex	managestore.js	/^var curIndex;$/;"	v
+cutLabels	managestore.js	/^function cutLabels() {$/;"	f
+def_array	global.js	/^function def_array(value) {return value ? value : new Array();}$/;"	f
+def_number	global.js	/^function def_number(value) {return value ? value : 0;}$/;"	f
+def_string	global.js	/^function def_string(value) {return value ? value : "";}$/;"	f
+deleteAll	managestore.js	/^function deleteAll() {$/;"	f
+deleteItem	cataedit3.js	/^function deleteItem() {$/;"	f
+deleteItem	managestore.js	/^function deleteItem(idx) {$/;"	f
+deleteallbutton	managestore.js	/^var deleteallbutton;$/;"	v
+directory	dbopWiki.js	/^        var directory = node.getAttribute("directory");$/;"	v
+directory	dbopXML.js	/^        var directory = node.getAttribute("directory");$/;"	v
+doc	seltopic.js	/^var doc;$/;"	v
+dom	managestore.js	/^var dom;$/;"	v
+editCatalog	cataedit3.js	/^function editCatalog() {$/;"	f
+editCatalog	options.js	/^function editCatalog() {$/;"	f
+editItem	cataedit3.js	/^function editItem() {$/;"	f
+editItem	managestore.js	/^function editItem(idx) {$/;"	f
+editTopic	cataedit3.js	/^function editTopic() {$/;"	f
+elements	cataedit3.js	/^function elements(id) {$/;"	f
+elements	catalogedit.js	/^function elements(id) {$/;"	f
+elements	options.js	/^function elements(id) {$/;"	f
+elements	topicedit.js	/^function elements(id) {$/;"	f
+elmCount	flatview.js	/^var elmCount=0;$/;"	v
+elm_desc	dbopWiki.js	/^            var elm_desc = xmldoc.createElement("Description");$/;"	v
+elm_desc	dbopXML.js	/^            var elm_desc = xmldoc.createElement("Description");$/;"	v
+elm_filter	dbopWiki.js	/^        var elm_filter = xmldoc.createElement("Filter");$/;"	v
+elm_filter	dbopXML.js	/^        var elm_filter = xmldoc.createElement("Filter");$/;"	v
+elm_items	dbopWiki.js	/^        var elm_items = xmldoc.getElementsByTagName("ITEM");$/;"	v
+elm_items	dbopXML.js	/^        var elm_items = xmldoc.getElementsByTagName("ITEM");$/;"	v
+fEditCatalog	cataedit3.js	/^var fEditCatalog = true;$/;"	v
+fEditTopic	cataedit3.js	/^var fEditTopic = true;$/;"	v
+favourite	cataedit3.js	/^var favourite;$/;"	v
+fileObject	dbopWiki.js	/^    		var fileObject = Components.classes["@mozilla.org\/file\/local;1"].createInstance($/;"	v
+fileObject	dbopXML.js	/^    		var fileObject = Components.classes["@mozilla.org\/file\/local;1"].createInstance($/;"	v
+filter	dbopWiki.js	/^        var filter;$/;"	v
+filter	dbopXML.js	/^        var filter;$/;"	v
+flatview_load	flatview.js	/^var flatview_load = 0;$/;"	v
+foStream	dbopWiki.js	/^    		var foStream =  Components.classes["@mozilla.org\/network\/file-output-stream;1"].createInstance($/;"	v
+foStream	dbopXML.js	/^    		var foStream =  Components.classes["@mozilla.org\/network\/file-output-stream;1"].createInstance($/;"	v
+focusOn	cataedit3.js	/^var focusOn = 0;$/;"	v
+getCurItem	managestore.js	/^function getCurItem(idx) {$/;"	f
+getElementById	managestore.js	/^function getElementById(itemBox,id) {$/;"	f
+getElementInfo	flatview.js	/^function getElementInfo() {$/;"	f
+getElements	flatview.js	/^function getElements() {$/;"	f
+getFilename	flatview.js	/^function getFilename(idx) {$/;"	f
+getIntValue	topicedit.js	/^function getIntValue(id) {$/;"	f
+getLocalizedMessage	cataedit3.js	/^function getLocalizedMessage(msg)$/;"	f
+getLocalizedMessage	options.js	/^function getLocalizedMessage(msg)$/;"	f
+getString	managestore.js	/^function getString(msg)$/;"	f
+getThumbSrc	flatview.js	/^function getThumbSrc(idx) {$/;"	f
+getValue	cataedit3.js	/^function getValue(id) {$/;"	f
+getValue	catalogedit.js	/^function getValue(id) {$/;"	f
+getValue	options.js	/^function getValue(id) {$/;"	f
+getValue	topicedit.js	/^function getValue(id) {$/;"	f
+getWebSaverGlobal	shared.js	/^function getWebSaverGlobal() {$/;"	f
+getXrLiN	shared.js	/^function getXrLiN() {$/;"	f
+handler	cataedit3.js	/^var handler;$/;"	v
+handler	seltopic.js	/^var handler;$/;"	v
+hideAll	managestore.js	/^function hideAll() {$/;"	f
+hideItem	managestore.js	/^function hideItem(idx) {$/;"	f
+hideallbutton	managestore.js	/^var hideallbutton;$/;"	v
+idx	database.js	/^        var idx = id.index;$/;"	v
+initSelectMenu	flatview.js	/^function initSelectMenu(id) {$/;"	f
+isRemoved	managestore.js	/^function isRemoved(idx) {$/;"	f
+isTopic	database.js	/^        var isTopic=0;$/;"	v
+label	dbopWiki.js	/^        var label,directory,cdate;$/;"	v
+label	dbopXML.js	/^        var label,directory,cdate;$/;"	v
+labels	database.js	/^        var labels = path.split(\/\\\/+\/);$/;"	v
+level	database.js	/^        var level = id.level;$/;"	v
+loadPage	flatview.js	/^function loadPage(idx) {$/;"	f
+loadTopic	managestore.js	/^function loadTopic() {$/;"	f
+m	xrlin.string.js	/^                var m = fn.match(\/(.*)\\.[^\\.]*$\/);$/;"	v
+managestore_load	managestore.js	/^var managestore_load = 0;$/;"	v
+managestore_modified	managestore.js	/^var managestore_modified = false;$/;"	v
+message	database.js	/^        var message = ptext;$/;"	v
+mouseLeft	managestore.js	/^function mouseLeft(element) {$/;"	f
+mouseOver	managestore.js	/^function mouseOver(element) {$/;"	f
+msg	savetopic.js	/^        var msg;$/;"	v
+newSeparator	managestore.js	/^function newSeparator() {$/;"	f
+newSpacer	managestore.js	/^function newSpacer() {$/;"	f
+newTopic	seltopic.js	/^function newTopic() {$/;"	f
+notifyChanged	cataedit3.js	/^function notifyChanged(node) {$/;"	f
+notifyChanged	seltopic.js	/^function notifyChanged(node) {$/;"	f
+old_directory	options.js	/^var old_directory;$/;"	v
+old_storage	options.js	/^var old_storage;$/;"	v
+onDialogAccept	cataedit3.js	/^function onDialogAccept()$/;"	f
+onDialogAccept	catalogedit.js	/^function onDialogAccept() {$/;"	f
+onDialogAccept	options.js	/^function onDialogAccept()$/;"	f
+onDialogAccept	seltopic.js	/^function onDialogAccept() {$/;"	f
+onDialogAccept	topicedit.js	/^function onDialogAccept() {$/;"	f
+onDialogCancel	cataedit3.js	/^function onDialogCancel()$/;"	f
+onDialogCancel	catalogedit.js	/^function onDialogCancel() {$/;"	f
+onDialogCancel	options.js	/^function onDialogCancel()$/;"	f
+onDialogCancel	seltopic.js	/^function onDialogCancel() {$/;"	f
+onDialogCancel	topicedit.js	/^function onDialogCancel() {$/;"	f
+onFocus	cataedit3.js	/^function onFocus(idx) {$/;"	f
+onLoad	cataedit3.js	/^function onLoad()$/;"	f
+onLoad	catalogedit.js	/^function onLoad() {$/;"	f
+onLoad	flatview.js	/^function onLoad() {$/;"	f
+onLoad	managestore.js	/^function onLoad() {$/;"	f
+onLoad	options.js	/^function onLoad()$/;"	f
+onLoad	seltopic.js	/^function onLoad() {$/;"	f
+onLoad	topicedit.js	/^function onLoad() {$/;"	f
+onUnLoad	flatview.js	/^function onUnLoad() {$/;"	f
+onUnLoad	managestore.js	/^function onUnLoad() {$/;"	f
+openEditCatalog	cataedit3.js	/^function openEditCatalog(cat) {$/;"	f
+openURL	managestore.js	/^function openURL(aURL)$/;"	f
+openXml	managestore.js	/^function openXml() {$/;"	f
+os	xrlin.fileio.js	/^            var os = Components.classes["@mozilla.org\/intl\/converter-output-stream;1"].createInstance(Components.interfaces.nsIConverterOutputStream);$/;"	v
+pageCount	flatview.js	/^var pageCount=1;$/;"	v
+pageCur	flatview.js	/^var pageCur=1;$/;"	v
+pageSize	flatview.js	/^var pageSize=12;$/;"	v
+passback	seltopic.js	/^var passback;$/;"	v
+persist	database.js	/^        var persist = Components.classes['@mozilla.org\/embedding\/browser\/nsWebBrowserPersist;1'].createInstance(Components.interfaces.nsIWebBrowserPersist);$/;"	v
+prompts	flatview.js	/^var prompts = Components.classes["@mozilla.org\/embedcomp\/prompt-service;1"]$/;"	v
+prompts	managestore.js	/^var prompts = Components.classes["@mozilla.org\/embedcomp\/prompt-service;1"]$/;"	v
+quote	cataedit3.js	/^function quote(text) {$/;"	f
+quote	seltopic.js	/^function quote(text) {$/;"	f
+ref_cat	cataedit3.js	/^var ref_cat;$/;"	v
+referItem	managestore.js	/^function referItem(idx) {$/;"	f
+removeAllChild	managestore.js	/^function removeAllChild(ELM) {$/;"	f
+removed_items	managestore.js	/^var removed_items="_";$/;"	v
+res	xrlin.system.js	/^                var res = fp.show();$/;"	v
+resizeColum	flatview.js	/^function resizeColum(box) {$/;"	f
+result	database.js	/^        var result = "\/";$/;"	v
+result	database.js	/^        var result = root;$/;"	v
+saveXml	managestore.js	/^function saveXml() {$/;"	f
+savebutton	managestore.js	/^var savebutton;$/;"	v
+selectDirectory	cataedit3.js	/^function selectDirectory() {$/;"	f
+selectDirectory	catalogedit.js	/^function selectDirectory() {$/;"	f
+selectFolder	options.js	/^function selectFolder() {$/;"	f
+selectStorage	cataedit3.js	/^function selectStorage() {$/;"	f
+selectStorage	options.js	/^function selectStorage(create) {$/;"	f
+selectStorage	topicedit.js	/^function selectStorage() {$/;"	f
+selectTopic	flatview.js	/^function selectTopic() {$/;"	f
+selectTopic	managestore.js	/^function selectTopic() {$/;"	f
+setTextboxPage	flatview.js	/^function setTextboxPage() {$/;"	f
+setValue	cataedit3.js	/^function setValue(id,value) {$/;"	f
+setValue	catalogedit.js	/^function setValue(id,value) {$/;"	f
+setValue	options.js	/^function setValue(id,value) {$/;"	f
+setValue	topicedit.js	/^function setValue(id,value) {$/;"	f
+showAll	managestore.js	/^function showAll() {$/;"	f
+showItem	managestore.js	/^function showItem(idx) {$/;"	f
+showallbutton	managestore.js	/^var showallbutton;$/;"	v
+storage	cataedit3.js	/^var storage;$/;"	v
+storage	dbopWiki.js	/^        var storage = node.getAttribute("storage");$/;"	v
+storage	dbopXML.js	/^        var storage = node.getAttribute("storage");$/;"	v
+tStorage	dbopWiki.js	/^        var tStorage = node.getAttribute("storage");$/;"	v
+tStorage	dbopXML.js	/^        var tStorage = node.getAttribute("storage");$/;"	v
+title	database.js	/^        var title = ptext;$/;"	v
+toFavourite	seltopic.js	/^function toFavourite() {$/;"	f
+toggleItem	managestore.js	/^function toggleItem(idx) {$/;"	f
+topic	managestore.js	/^var topic;$/;"	v
+topic	topicedit.js	/^var topic;$/;"	v
+topicIndex	database.js	/^        var topicIndex = -1;$/;"	v
+topicSelected	seltopic.js	/^function topicSelected(tp) {$/;"	f
+txtObject	database.js	/^        var txtObject = xrLiN.fileIO.fileObject(fdSaveIn);$/;"	v
+type	cataedit3.js	/^var type = "file";$/;"	v
+update	database.js	/^        this.update = function(what,index) {$/;"	f
+updateFilter	topicedit.js	/^function updateFilter() {$/;"	f
+updateInfo	cataedit3.js	/^function updateInfo() {$/;"	f
+updateInfo	catalogedit.js	/^function updateInfo() {$/;"	f
+updateInfo	topicedit.js	/^function updateInfo() {$/;"	f
+uri	database.js	/^        var uri = urifix.createFixupURI(url, 0);$/;"	v
+urifix	database.js	/^        var urifix = Components.classes['@mozilla.org\/docshell\/urifixup;1'].getService(Components.interfaces.nsIURIFixup);$/;"	v
+viewItem	managestore.js	/^function viewItem(idx) {$/;"	f
+ws	cataedit3.js	/^var ws = getWebSaverGlobal();$/;"	v
+ws	managestore.js	/^var ws = getWebSaverGlobal();$/;"	v
+ws	options.js	/^var ws = getWebSaverGlobal();$/;"	v
+ws	seltopic.js	/^var ws = getWebSaverGlobal();$/;"	v
+xmlfile	managestore.js	/^var xmlfile;$/;"	v
+xr	cataedit3.js	/^var xr = getXrLiN();$/;"	v
+xr	catalogedit.js	/^var xr = getXrLiN();$/;"	v
+xr	options.js	/^var xr = getXrLiN();$/;"	v
+xr	seltopic.js	/^var xr = getXrLiN();$/;"	v
+xr	topicedit.js	/^var xr = getXrLiN();$/;"	v
+xrLiN	managestore.js	/^var xrLiN = getXrLiN();$/;"	v
+xrLiN.window	xrlin.window.js	/^xrLiN.window = function() {$/;"	c
+xrLiN.window.getMainWindow	xrlin.window.js	/^    this.getMainWindow = function() {$/;"	m

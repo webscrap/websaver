@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://websaver2/skin/options.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://websaver2/locale/websaver2.dtd">
+
+<dialog
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="websaver2TopicEditor"
+        minwidth="500"
+        flex="1"
+        title="Topic Editor"
+        buttons="accept, cancel"
+        onload="return onLoad();"
+        ondialogaccept="return onDialogAccept();"
+        ondialogcancel="return onDialogCancel();">
+        <script src="chrome://websaver2/content/shared.js" />
+        <script src="chrome://websaver2/content/topicedit.js" />
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="websaver2.locale" src="chrome://websaver2/locale/websaver2.properties"/>
+    </stringbundleset>
+    <vbox>
+        <groupbox flex="1" orient="vertical">
+        <caption label="Information"/>
+        <hbox flex="1">
+            <label width="80" value="Label:"/>
+            <menulist editable="true" label="" id="topicLabel" flex="1">
+            </menulist>
+        </hbox>
+        <hbox flex="1">
+            <label width="80" value="File:"/>
+            <textbox flex="1" value="" id="topicStorage"/>
+            <button label="Select" id="selectDirectory" oncommand="return selectStorage();"/>
+        </hbox>
+        </groupbox>
+        <groupbox flex="1" orient="vertical" id="catalogEditor">
+            <caption label="Filter:"/>
+            <hbox flex="1">
+                <label width="80" value="Names:"/>
+                <textbox flex="1" value="" id="filterNames"/>
+            </hbox>
+            <hbox flex="1">
+                <label width="80" value="minWidth"/>
+                <textbox flex="1" value="" id="filterMinWidth"/>
+                <label width="80" value="maxWidth"/>
+                <textbox flex="1" value="" id="filterMaxWidth"/>
+            </hbox>
+            <hbox flex="1">
+                <label width="80" value="minHeight"/>
+                <textbox flex="1" value="" id="filterMinHeight"/>
+                <label width="80" value="maxHeight"/>
+                <textbox flex="1" value="" id="filterMaxHeight"/>
+            </hbox>
+        </groupbox>
+    </vbox>
+</dialog>

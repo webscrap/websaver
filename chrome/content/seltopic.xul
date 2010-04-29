@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://websaver2/skin/options.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://websaver2/locale/websaver2.dtd">
+
+<dialog
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="websaver2TopicSelector"
+        title="Select Topic"
+        flex="1"
+        minwidth="600"
+        buttons="accept, cancel"
+        onload="return onLoad();"
+        ondialogaccept="return onDialogAccept();"
+        ondialogcancel="return onDialogCancel();">
+        <script src="chrome://websaver2/content/shared.js" />
+        <script src="chrome://websaver2/content/catalogHandler.js" />
+        <script src="chrome://websaver2/content/seltopic.js" />
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="websaver2.locale" src="chrome://websaver2/locale/websaver2.properties"/>
+    </stringbundleset>
+    <vbox flex="1">
+        <hbox>
+            <menulist label="" id="menuList" flex="1">
+        	</menulist>
+	<button flex="0" label="Favourite" oncommand="toFavourite();"/>
+	<button flex="0" label="New Topic" oncommand="newTopic();"/>
+        </hbox>
+        <hbox flex="1">
+            <listbox rows="8" id="catalogList" flex="1"/>
+            <listbox rows="8" id="topicList" flex="4"/>
+        </hbox>
+         <hbox flex="1">
+            <label style='color:blue;' id="topicLabel" value=""  flex="1"/>
+	    <button flex="0" label="Add to Favourite" oncommand="addFavourite();"/>
+        </hbox>
+    </vbox>
+</dialog>

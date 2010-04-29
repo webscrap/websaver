@@ -1,0 +1,32 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+image.normalitem {
+    border:1px solid #000000;
+    padding:2px;
+    background-color:#ffffff;
+}
+image.overitem {
+    border:1px solid #ffffff;
+    padding:2px;
+    background-color:#000000;
+}
+window {
+    background-color:#999999;
+}
+groupbox {
+    border-color:#ffffff;
+}
+vbox.item {
+}
+image.delete,image.edit{
+    padding-left : 10px;
+    cursor : pointer;
+}
+label.text-link {
+    
+}
+.overitem {
+    background-color:#FEDCBA;
+}
+.normalitem {
+    background-color:#FFFFFF;
+}

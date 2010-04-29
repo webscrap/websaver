@@ -1,0 +1,10 @@
+
+content websaver2 chrome/content/
+
+overlay chrome://browser/content/browser.xul    chrome://websaver2/content/global.xul
+
+skin websaver2 classic/1.0 chrome/skin/classic/
+style	chrome://global/content/customizeToolbar.xul	chrome://websaver2/skin/websaver2.css
+
+locale websaver2 en-US chrome/locale/en-US/
+

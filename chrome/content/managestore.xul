@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://websaver2/skin/managestore.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://websaver2/locale/websaver2.dtd">
+
+<window 
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    id="websaver2ManageUrl"
+    width="800"
+    height="600"
+    onunload="return onUnLoad();"
+    title="&websaver2.managestore.title;"
+    onload="return onLoad();">
+    
+    <script src="chrome://websaver2/content/shared.js"/>
+    <script src="chrome://websaver2/content/managestore.js"/>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="websaver2.locale" src="chrome://websaver2/locale/websaver2.properties"/>
+    </stringbundleset>
+    <popupset>
+        <menupopup id="managestore_image_action">
+            <menuitem 
+                id="managestore_action_toggle"
+                label="&websaver2.managestore.action.show;"
+                oncommand = "return toggleItem();" />
+            <menuitem 
+                label="&websaver2.managestore.action.delete;"
+                oncommand = "return deleteItem();" />
+            <menuseparator />
+           <menuitem 
+                label="&websaver2.managestore.action.view;"
+                oncommand = "return viewItem();" />
+            <menuitem 
+                label="&websaver2.managestore.action.refer;"
+                oncommand = "return referItem();" />
+        </menupopup>
+    </popupset>
+<toolbox>
+    <menubar>
+        <menu label="&websaver2.managestore.menu.folder;">
+            <menupopup>
+                <menuitem id="managestore_menu_folders"
+                    label="&websaver2.managestore.menu.select;" 
+                    oncommand="selectTopic();"/>
+                <menuitem id="managestore_openmenu"
+                        label="&websaver2.managestore.menu.open;"
+                        oncommand="return openXml();"
+                        disabled="false"/>
+                <menuitem id="managestore_savebutton"
+                        class="edit" label="&websaver2.managestore.menu.save;"
+                        oncommand="return saveXml();"
+                        disabled="true"/>
+                <menuseparator/>
+                <menuitem id="managestore_exitmenu"
+                        class="edit" label="&websaver2.managestore.menu.exit;"
+                        oncommand="window.close();"
+                        disabled="false"/>
+            </menupopup>
+        </menu>
+
+        <menu label="&websaver2.managestore.menu.action;"><menupopup id="managestore_menu_action">
+            <menuitem id="managestore_showallbutton" 
+                    label="&websaver2.managestore.showall;" 
+                    disabled="true" 
+                    oncommand="return showAll();"/>
+            <menuitem id="managestore_hideallbutton" 
+                    label="&websaver2.managestore.hideall;" 
+                    disabled="true" 
+                    oncommand="return hideAll();"/>
+            <menuitem class="delete"
+                    id="managestore_deleteallbutton" 
+                    label="&websaver2.managestore.deleteall;" 
+                    oncommand="return deleteAll();"
+                    disabled="true"/>
+        </menupopup></menu>
+
+    </menubar>
+</toolbox>
+        <vbox flex="1" style='overflow: scroll;' id="managestore_editurl">
+        </vbox>
+
+</window>
+

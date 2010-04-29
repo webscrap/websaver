@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://websaver2/locale/websaver2.dtd">
+<window id="websaver2_global" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script src="chrome://websaver2/content/xrlin.base.js"/>
+    <script src="chrome://websaver2/content/xrlin.debug.js"/>
+    <script src="chrome://websaver2/content/xrlin.utils.js"/>
+    <script src="chrome://websaver2/content/xrlin.string.js"/>
+    <script src="chrome://websaver2/content/xrlin.menu.js"/>
+    <script src="chrome://websaver2/content/xrlin.fileio.js" />
+    <script src="chrome://websaver2/content/xrlin.system.js" />
+    <script src="chrome://websaver2/content/xrlin.pref.js" />
+    <script src="chrome://websaver2/content/xrlin.dom.js" />
+    <script src="chrome://websaver2/content/xrlin.xml.js" />
+    <script src="chrome://websaver2/content/xrlin.window.js" />
+    <script src="chrome://websaver2/content/global.js" />
+    <script src="chrome://websaver2/content/shared.js" />
+    <script src="chrome://websaver2/content/database.js" />
+    <script src="chrome://websaver2/content/dbopFS.js" />
+    <script src="chrome://websaver2/content/pref.js" />
+    <script src="chrome://websaver2/content/xulapps.js" />
+    <script src="chrome://websaver2/content/savetopic.js" />
+    <script src="chrome://websaver2/content/statusbar.js" />
+    <script src="chrome://websaver2/content/contmenu.js" />
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="websaver.locale" src="chrome://websaver2/locale/websaver2.properties"/>
+    </stringbundleset>
+    <popupset>
+        <menupopup id="websaver2_status_popup">
+            <menuitem label="&websaver2.statusbar.context.managestore;"
+                oncommand="WebSaverGlobal.app.openManager();"/>
+            <menuitem label="Edit Catalog"
+                oncommand='WebSaverGlobal.editCatalog();'/>
+            <menuitem label="&websaver2.statusbar.context.options;"
+                oncommand="WebSaverGlobal.app.openOptions();"/>
+        </menupopup>
+    </popupset>
+    <statusbar id="status-bar" 
+    >
+        <statusbarpanel 
+            id="WebSaverStatusBar"
+            label="&websaver2.statusbar.label;"
+            context="websaver2_status_popup"
+            tooltiptext="&websaver2.statusbar.tooltip;"
+            />
+    </statusbar>
+
+    <popup  id="contentAreaContextMenu">
+        <menuseparator/>
+        <menuitem 
+            id="websaver2_menu_select"
+            label="&websaver2.context.select.label;"
+            oncommand='return WebSaverContextMenu.menuClick("SELECT");'
+        />
+        <menuitem 
+            id="websaver2_menu_target"
+            label="&websaver2.context.target.label;"
+            oncommand='return WebSaverContextMenu.menuClick("TARGET");'
+        />
+        <menuitem 
+            id="websaver2_menu_all"
+            label="&websaver2.context.all.label;"
+            oncommand='return WebSaverContextMenu.menuClick("ALL");'
+        />
+
+    </popup>
+
+</window>

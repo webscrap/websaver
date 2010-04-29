@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://websaver2/skin/options.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://websaver2/locale/websaver2.dtd">
+
+<dialog
+
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="websaver2Options"
+        minwidth="500"
+        flex="1"
+        title="&websaver2.options.title;"
+        buttons="accept, cancel"
+        onload="return onLoad();"
+        ondialogaccept="return onDialogAccept();"
+        ondialogcancel="return onDialogCancel();">
+        <script src="chrome://websaver2/content/shared.js" />
+        <script src="chrome://websaver2/content/options.js" />
+
+    <groupbox flex="0" orient="vertical" border="1">
+    <caption label="Websaver2 Catalog Information" />
+        <vbox flex="1">
+        <label value="&websaver2.options.storage;"/>
+        <hbox flex="1">
+            <textbox flex="1" id="catalogStorage" 
+            />
+            <button flex="0" id="selectStorage" 
+                label="&websaver2.options.select;" 
+                oncommand="return selectStorage();" />
+        </hbox>
+        </vbox>
+        <label value="&websaver2.options.defaultfolder;"/>
+        <hbox flex="1">
+            <textbox flex="1" id="defaultFolder" 
+            />
+            <button flex="0" id="selectStorage"  
+                label="&websaver2.options.select;" 
+                oncommand="return selectFolder();" />
+        </hbox>
+        <space height="10"/>
+        <hbox flex="1">
+            <space flex="1"/>
+            <button align="right" flex="0"
+                label="&websaver2.options.editcatalog;" 
+                            oncommand="return editCatalog();" />
+        </hbox>
+    </groupbox>
+    <vbox>
+    <checkbox 
+        id="enableDClick"
+        width="450"
+        label="&websaver2.options.doubleclick;"
+    />
+    <checkbox
+        id="enablePersist"
+        label="&websaver2.options.localstore;"
+    />
+    </vbox>
+</dialog>

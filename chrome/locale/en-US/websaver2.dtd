@@ -1,0 +1,63 @@
+<!ENTITY websaver2.toolbar.label "Folders">
+<!ENTITY websaver2.toolbar.tooltip "Manage Store">
+<!ENTITY websaver2.context.label "Web Saver 2">
+<!ENTITY websaver2.context.select.label "Save Selected">
+<!ENTITY websaver2.context.target.label "Save Target">
+<!ENTITY websaver2.context.all.label "Save All">
+<!ENTITY websaver2.options.title "Web Saver 2 - Options">
+<!ENTITY websaver2.options.maintab "Main">
+<!ENTITY websaver2.options.miscellaneoustab "Miscellaneous">
+<!ENTITY websaver2.options.advancedtab "Advanced">
+<!ENTITY websaver2.options.new "New">
+<!ENTITY websaver2.options.edit "Edit">
+<!ENTITY websaver2.options.delete "Delete">
+<!ENTITY websaver2.options.separator "Separator">
+<!ENTITY websaver2.options.folders "Folders">
+<!ENTITY websaver2.options.description "Description">
+<!ENTITY websaver2.options.path "Path">
+<!ENTITY websaver2.options.contextmenu "Context-Menu">
+<!ENTITY websaver2.options.shortcut "Keyboard shortcut: ">
+<!ENTITY websaver2.options.numericshortcuts "Display numeric shortcuts trailing the first ten folder entries.">
+<!ENTITY websaver2.options.hideinvalidfolders "Hide folders with invalid path (otherwise they just get disabled).">
+<!ENTITY websaver2.options.prefs "Firefox preferences">
+<!ENTITY websaver2.options.prefs-description "After saving to a folder write that path into the following Firefox preferences (prefs.js).">
+<!ENTITY websaver2.options.prefs-clear "Clear">
+<!ENTITY websaver2.options.doubleclick "Performing a left double-click on an image directly saves it to the previously used folder. (This option requires a restart of Firefox to take action.)">
+<!ENTITY websaver2.options.localstore "Save to local directories">
+<!ENTITY websaver2.setfolder.title "Edit Store">
+<!ENTITY websaver2.setfolder.data0 "Description">
+<!ENTITY websaver2.setfolder.data1 "Path">
+<!ENTITY websaver2.setfolder.data2 "Min Width">
+<!ENTITY websaver2.setfolder.data3 "Min Height">
+<!ENTITY websaver2.setfolder.data4 "Tagname accepted">
+
+<!ENTITY websaver2.options.helptab "Help">
+<!ENTITY websaver2.options.website "Please visit this website for detailed instructions:">
+<!ENTITY websaver2.statusbar.label "Web Saver 2">
+<!ENTITY websaver2.statusbar.tooltip "Web Saver 2">
+<!ENTITY websaver2.managestore.title "Manage Store">
+<!ENTITY websaver2.managestore.deleteall "Delete All Items">
+<!ENTITY websaver2.managestore.save "Save">
+<!ENTITY websaver2.managestore.show "Show">
+<!ENTITY websaver2.managestore.hide "Hide">
+<!ENTITY websaver2.managestore.showall "Show All Items">
+<!ENTITY websaver2.managestore.hideall "Hide All Items">
+<!ENTITY websaver2.managestore.menu.folder "Folder">
+<!ENTITY websaver2.managestore.menu.save "Save">
+<!ENTITY websaver2.managestore.menu.exit "Exit">
+<!ENTITY websaver2.managestore.menu.action "Action">
+<!ENTITY websaver2.managestore.menu.select "Select">
+<!ENTITY websaver2.managestore.menu.open "Open">
+<!ENTITY websaver2.managestore.action.hide "Hide item">
+<!ENTITY websaver2.managestore.action.show "Show item">
+<!ENTITY websaver2.managestore.action.view "View item">
+<!ENTITY websaver2.managestore.action.refer "View refer URL">
+<!ENTITY websaver2.managestore.action.delete "Delele item">
+<!ENTITY websaver2.statusbar.context.managestore "Manage Store">
+<!ENTITY websaver2.statusbar.context.options "Preference">
+<!ENTITY websaver2.cataedit.title "CatalogEditor">
+
+<!ENTITY websaver2.options.storage "Database Storage:">
+<!ENTITY websaver2.options.defaultfolder "Default Folder:">
+<!ENTITY websaver2.options.select "Select ...">
+<!ENTITY websaver2.options.editcatalog "Edit Database Catalog">
