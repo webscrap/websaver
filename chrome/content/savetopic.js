@@ -52,7 +52,7 @@ WebSaverGlobal.topicSaver = {
                 continue;
             }
             nn = nn.nodeName.toLowerCase();
-            if(nn == "img" || nn == "a") {
+            if(nn == "img" ) {//|| nn == "a") {
                 res.push(node.childNodes[i]);
             }
             else if(node.childNodes[i].childNodes.length>0) {
@@ -77,7 +77,6 @@ WebSaverGlobal.topicSaver = {
             var range = sel.getRangeAt(0);
             var rangedoc = range.cloneContents();
             ELMS = ELMS.concat(sel,this.getGoodElements(rangedoc));
-            alert(ELMS.length);
             //ELMS.push(cmenu.target.ownerDocument.defaultView.getSelection());
             break;
         default :

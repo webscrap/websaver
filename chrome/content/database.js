@@ -234,12 +234,12 @@ WebSaverGlobal.database = {
                     if(this.ingoreNode(node,nodename,topic,data,!checkfilter)) continue;
                     if(pFolder) this.persistImage(node.src,pFolder);
                     break;
-                case "a"    : 
-                    type    =   "link";
-                    data    =   node.href;
-                    label   =   (node.innerHTML) ? node.innerHTML : doc.title;
-                    if(this.ingoreNode(node,nodename,topic,data,!checkfilter)) continue;
-                    break;
+                //case "a"    : 
+                //    type    =   "link";
+                 //   data    =   node.href;
+                 //   label   =   (node.innerHTML) ? node.innerHTML : doc.title;
+                 //   if(this.ingoreNode(node,nodename,topic,data,!checkfilter)) continue;
+                 //   break;
                 case "text" :
                     type    =   "text";
                     if(this.ingoreNode(node,nodename,topic,data,!checkfilter)) continue;
