@@ -44,24 +44,41 @@ WebSaverGlobal.topicSaver = {
             msg = ignored + " ignored.";
         WebSaverGlobal.statusBar.message(topic.label + ":" + msg);
     },
+    getGoodElements : function(node,filter_yes,filter_no) {
+        var res = new Array();
+        for(var i=0;i<node.childNodes.length;i++) {
+            var nn = node.childNodes[i];
+            if(!nn.nodeName) {
+                continue;
+            }
+            nn = nn.nodeName.toLowerCase();
+            if(nn == "img" || nn == "a") {
+                res.push(node.childNodes[i]);
+            }
+            else if(node.childNodes[i].childNodes.length>0) {
+                res = res.concat(this.getGoodElements(node.childNodes[i],filter_yes,filter_no));
+            }
+        }
+        return res;
+    },
     getSelection : function(type,cmenu) {
         type = type.toUpperCase();
         var ELMS = new Array();
         switch(type) {
         case "ALL" :
             var doc = cmenu.target.ownerDocument;
-            var images = doc.getElementsByTagName("img");
-            for (var i = 0 ; i < images.length ; i++) 
-                ELMS.push(images[i]);
-            var links = doc.getElementsByTagName("a");
-            for (var i = 0 ; i < links.length ; i++) 
-                ELMS.push(links[i]);
+            ELMS = ELMS.concat(this.getGoodElements(doc));
             break;
         case "TARGET" :
             ELMS.push(cmenu.target);
             break;
         case "SELECT" :
-            ELMS.push(cmenu.target.ownerDocument.defaultView.getSelection());
+            var sel = cmenu.target.ownerDocument.defaultView.getSelection();
+            var range = sel.getRangeAt(0);
+            var rangedoc = range.cloneContents();
+            ELMS = ELMS.concat(sel,this.getGoodElements(rangedoc));
+            alert(ELMS.length);
+            //ELMS.push(cmenu.target.ownerDocument.defaultView.getSelection());
             break;
         default :
             break;

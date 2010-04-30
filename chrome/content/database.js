@@ -220,7 +220,11 @@ WebSaverGlobal.database = {
             var node = nodes[i];
             var nodename = node.nodeName;
             nodename = nodename ? nodename.toLowerCase() : "text";
-            var label,type,data,extdata1,extdata2;
+            var label="";
+            var type="";
+            var data="";
+            var extdata1="";
+            var extdata2="";
             switch (nodename) {
                 case "img" :
                     type    =   "image";
@@ -238,7 +242,9 @@ WebSaverGlobal.database = {
                     break;
                 case "text" :
                     type    =   "text";
+                    if(this.ingoreNode(node,nodename,topic,data,!checkfilter)) continue;
                     extdata1 = node.toString();
+                    extdata1 = extdata1.replace(/\s*\n\s*\n\s*/,"\n","g");
                     //extdata1 = node.textContent;
                     //toString();
                     label   =   this.textInput(
@@ -247,7 +253,6 @@ WebSaverGlobal.database = {
                     if(!label)
                         continue;
                     data = label;
-                    //if(this.ingoreNode(node,nodename,topic,data,!checkfilter)) continue;
                     if(pFolder) this.persistText(label,extdata1,pFolder);
                     break;
                 default :
