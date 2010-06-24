@@ -24,8 +24,7 @@ var WebSaverGlobal =  {
         this.preference.directory = this.pref.getDirectory();
         this.preference.enableDblClick = this.pref.getEnableDblClick();
         this.preference.enablePersist = this.pref.getEnablePersist();
-        this.preference.catalog = this.database.readCatalog(
-            "/",
+        this.preference.catalog = this.database.read(
             this.preference.storage,
             this.preference.directory
         );

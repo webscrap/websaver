@@ -42,7 +42,7 @@ WebSaverGlobal.database.io = {
     	}
     	return true;
     },
-    topicFromNode	: function(node) {
+    topicFromNode	: function(node,parentCatalog,recur) {
         var tLabel = node.getAttribute("label");
         var tStorage = node.getAttribute("storage");
         var filter;
@@ -55,14 +55,19 @@ WebSaverGlobal.database.io = {
             var maxh = elm_filter.getAttribute("maxHeight");
             filter = new this.database.filter(fn,minw,maxw,minh,maxh);
         }
-        var result = new this.database.topic(tLabel,
+        var topic = new this.database.topic(tLabel,
                     tStorage,
                     null,
                     filter,
                     null);
-        return result;
+        topic.path = (topic.label.indexOf("/")>=0) ? topic.label : parentCatalog.path + topic.label;
+        topic._parentpath = parentCatalog._fullpath;
+        topic._itemspath = WebSaverGlobal.database.buildPath(topic._parentpath,topic.label);
+        //alert(topic._itemspath);
+        topic._fullpath = tStorage ? tStorage : WebSaverGlobal.database.buildPath(topic._parentpath,topic.label + '.xml');
+        return topic;
     },
-    nodeFromTopic	: function(xmldoc,topic) {
+    nodeFromTopic	: function(xmldoc,topic,recur) {
         var elm_topic = xmldoc.createElement("Topic");
         elm_topic.setAttribute("label",topic.label);
         elm_topic.setAttribute("storage",topic.storage);
@@ -76,39 +81,47 @@ WebSaverGlobal.database.io = {
         elm_topic.appendChild(elm_filter);
         return elm_topic;
     },
-    catalogFromNode	: function(node) {
+    catalogFromNode	: function(node,parentCatalog,recur) {
         var label = node.getAttribute("label");
         var storage = node.getAttribute("storage");
         var directory = node.getAttribute("directory");
         var catalogs = new Array()
         var topics = new Array();
-        var result = new this.database.catalog(label,storage,directory,topics,catalogs);
-        for(var i=0;i<node.childNodes.length;i++) {
-            var nodeName = node.childNodes[i].nodeName.toLowerCase();
-            if(nodeName == "subcatalog") {
-                catalogs.push(this.catalogFromNode(node.childNodes[i]));
-            }
-            else if(nodeName == "topic") {
-            topics.push(this.topicFromNode(node.childNodes[i]));
-            }
-            else {
-                continue;
+        var catalog = new this.database.catalog(label,storage,directory,topics,catalogs);
+        catalog.path = (catalog.label.indexOf("/")>=0) ? catalog.label : parentCatalog.path + catalog.label;
+        if(!catalog.path.match(/\/$/)) 
+            catalog.path += "/";
+        catalog._parentpath = parentCatalog._fullpath;
+        catalog._fullpath = directory ? directory :  WebSaverGlobal.database.buildPath(parentCatalog._fullpath,catalog.label);
+        if(recur) {
+            for(var i=0;i<node.childNodes.length;i++) {
+                var nodeName = node.childNodes[i].nodeName.toLowerCase();
+                if(nodeName == "subcatalog") {
+                    catalogs.push(this.catalogFromNode(node.childNodes[i]),catalog);
+                }
+                else if(nodeName == "topic") {
+                topics.push(this.topicFromNode(node.childNodes[i]),catalog);
+                }
+                else {
+                    continue;
+                }
             }
         }
-        result.catalogs = catalogs;
-//        result.rDirectory = rDirectory;
-        result.topics = topics;
-        return result;
+        catalog.catalogs = catalogs;
+        catalog.topics = topics;
+        return catalog;
     },
-    nodeFromCatalog	: function(xmldoc,catalog) {
+    nodeFromCatalog	: function(xmldoc,catalog,recur) {
         var elm = xmldoc.createElement("SubCatalog");
         elm.setAttribute("label",catalog.label);
         elm.setAttribute("storage",catalog.storage);
         elm.setAttribute("directory",catalog.directory);
-        for(var i=0;i<catalog.catalogs.length;i++)
-            elm.appendChild(this.nodeFromCatalog(xmldoc,catalog.catalogs[i]));
-        for(var i=0;i<catalog.topics.length;i++) 
-            elm.appendChild(this.nodeFromTopic(xmldoc,catalog.topics[i]));
+        if(recur) {
+            for(var i=0;i<catalog.catalogs.length;i++)
+                elm.appendChild(this.nodeFromCatalog(xmldoc,catalog.catalogs[i]));
+            for(var i=0;i<catalog.topics.length;i++) 
+                elm.appendChild(this.nodeFromTopic(xmldoc,catalog.topics[i]));
+        }
         return elm;
     },
     updateCatalog : function(catalog) {
@@ -179,12 +192,46 @@ WebSaverGlobal.database.io = {
         //TO-DO
     },
     read	: function(storage,fullpath,withData) {
-        xrLiN.debug.print("Reading " + fullpath);
-        var catalog = new this.database.root();
-        catalog._fullpath = fullpath;
-        catalog.label = "/";
-        catalog.path = "/";
-        return this.updateCatalog(catalog);
+        xrLiN.debug.print("Reading " + storage);
+        var xmldoc = this.getXMLDoc(storage);
+        var label,directory;
+        var catalogs = new Array();
+        var topics = new Array();
+        var result = new this.database.root(label,storage,fullpath,catalogs,topics);
+        result.path = "/";
+        if(xmldoc) {
+            var elm_desc = this.getFirstElement(xmldoc,"Description");
+            if(elm_desc) {
+                result.label = elm_desc.getAttribute("label");
+                result.directory = elm_desc.getAttribute("directory");
+                if(result.directory && (!fullpath))
+                {
+                    result._fullpath = directory;
+                }
+                else
+                {
+                    result._fullpath = fullpath;
+                }
+            }
+            for(var i=0;i<xmldoc.documentElement.childNodes.length;i++) {
+                var node = xmldoc.documentElement.childNodes[i];
+                var nodeName = node.nodeName.toLowerCase();
+                if(nodeName == "subcatalog")  
+                    catalogs.push(this.catalogFromNode(node,result,false));
+                else if(nodeName == "topic") 
+                    topics.push(this.topicFromNode(node,resulti,false));
+                else 
+                    continue;
+            }
+      }
+      result.catalogs = catalogs;
+      result.topics = topics;
+      xrLiN.debug.print("Get catalog:" + 
+                catalogs.length + ", topic:" + topics.length);
+//      result.rDirectory = rDirectory;
+      //this.database.buildCatalogDirectory(rDirectory,result);
+      xrLiN.debug.print(storage + " readed.");
+      return result;
     },
     write	: function(catalog,storage) {
         if(!catalog) return false;
@@ -197,11 +244,11 @@ WebSaverGlobal.database.io = {
     	xmldoc.documentElement.appendChild(elm_desc);
     	for(var i=0;i<catalog.catalogs.length;i++) {
     		var cur = catalog.catalogs[i];
-    		xmldoc.documentElement.appendChild(this.nodeFromCatalog(xmldoc,cur));
+    		xmldoc.documentElement.appendChild(this.nodeFromCatalog(xmldoc,cur,false));
     	}
             for(var i=0;i<catalog.topics.length;i++) {
     		var cur = catalog.topics[i];
-    		xmldoc.documentElement.appendChild(this.nodeFromTopic(xmldoc,cur));
+    		xmldoc.documentElement.appendChild(this.nodeFromTopic(xmldoc,cur,false));
     
             }
     	return this.writeXMLDoc(xmldoc,storage);

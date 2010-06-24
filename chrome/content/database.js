@@ -5,18 +5,15 @@ WebSaverGlobal.database = {
     io   : null,
     root : function(label,storage,directory,catalogs,topics) {
         var r = new WebSaverGlobal.database.catalog(label,storage,directory,catalogs,topics);
-        r.rDirectory = this.directory;
+        r.update = function() {
+            for(var i=0;i<this.catalogs.length;i++)
+            {
+                this.catalogs[i].update();
+            }
+        };
+//        r.directory = directory;
         r.path = "/";
         return r;
-        this.label = r.label;
-        this.storage = r.storage;
-        this.rStorage = r.rStorage;
-        this.directory = r.directory;
-        this.catalogs = r.catalogs;
-        this.topics = r.topics;
-        this.rDirectory = this.directory;
-        this.path = "/";
-        return this;
     },
     updateCatalog : function(catalog,what,index) {
         if(!what || what==1) {
