@@ -131,6 +131,9 @@ WebSaverGlobal.database.io = {
         var dir = Components.classes["@mozilla.org/file/local;1"].createInstance(
     			Components.interfaces.nsILocalFile);
     	dir.initWithPath(catalog._fullpath);
+        if(!dir.exists()) {
+            return catalog;
+        }
         var entries = dir.directoryEntries;
         catalog.catalogs = new Array();
         catalog.topics = new Array();
