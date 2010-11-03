@@ -58,11 +58,17 @@ function updateInfo() {
     try {
         topicLabel = elements("topicLabel");
         topicLabel.appendItem(topic.label);
-        var label=topic.label.replace(/\[[^\[\]]*\]/g,"");
+        var label=topic.label.replace(/[\*\?\!\/\\\]+|\[[^\[\]]*\]/g,"");
+//        label = label.replace(/^\s+|\s+$/,"");
+//        topicLabel.insertItemAt(0,label);
+        label = label.replace(/\s*-[^-]*$|^\s+|\s+$/,"");
         topicLabel.insertItemAt(0,label);
-        label=label.replace(/\s*-.*/g,"");
+        label = label.replace(/\s*-[^-]*$|^\s+|\s+$/,"");
         topicLabel.insertItemAt(0,label);
-        topicLabel.value = topic.label;
+        topicLabel.value = label;
+        label = label.replace(/\s*-[^-]*$|^\s+|\s+$/,"");
+        topicLabel.insertItemAt(0,label);
+        //topicLabel.value = topic.label;
 //        var item = topicList.appendItem(topics[i].label);
 
 //        setValue("topicLabel",topic.label);
