@@ -142,6 +142,10 @@ WebSaverGlobal.database.io = {
             elm.QueryInterface(Components.interfaces.nsIFile);
             var name = elm.leafName;
             if(elm.isDirectory()) {
+                var xmlfile = xrLiN.fileIO.fileObject(elm.path + ".xml");
+                if(xmlfile.exists()) {
+                    continue;
+                }
                 var new_cat = new WebSaverGlobal.database.catalog(name,"",elm.path);
                 catalog.addCatalog(new_cat);
             }
