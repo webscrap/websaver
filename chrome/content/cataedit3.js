@@ -142,12 +142,10 @@ function selectDirectory() {
 
 function addCatalog() {
     var p_cat = handler.getCatalog();
-    var result = openEditCatalog(new ws.database.catalog());
+    var result = ws.app.editCatalog(new ws.database.catalog());
+    //var result = openEditCatalog(new ws.database.catalog());
     if(result.changed) {
         p_cat.addCatalog(result);
-
-
-
         handler.refresh();
     }
 }
