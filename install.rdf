@@ -3,12 +3,12 @@
          xmlns:NC="http://home.netscape.com/NC-rdf#"
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
-                   em:id="websaver2@xiaoranzzz.myplace"
+                   em:id="websaver2@myplace.hell"
                    em:name="Web Saver 2"
                    em:version="1.0"
-                   em:creator="xiaoranzzz@myplace.hell"
+                   em:creator="eotect@gmail.com"
                    em:description="Capture and manage urls,images,notes..."
-                   em:homepageURL="http://xiaoranzzz.blogspot.com"
+                   em:homepageURL="http://github.com/eotect/websaver2"
                    em:iconURL="chrome://websaver2/skin/websaver232.png"
                    em:optionsURL="chrome://websaver2/content/options.xul">
     <em:targetApplication RDF:resource="rdf:#$34jVz"/>
@@ -17,7 +17,7 @@
   <RDF:Description RDF:about="rdf:#$34jVz"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="1.0"
-                   em:maxVersion="3.*" />
+                   em:maxVersion="4.*" />
   <RDF:Description RDF:about="urn:mozilla:extension:file:websaver2"
                    em:package="content/"
                    em:skin="skin/classic/"
